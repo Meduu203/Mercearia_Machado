@@ -36,7 +36,7 @@ namespace Mercearia_Machado
 
         private void btnMostrasenha_MouseUp(object sender, MouseEventArgs e)
         {
-            txtSenha.PasswordChar = 'lol123';
+            txtSenha.PasswordChar = '#';
         }
 
         private void btnEntrar_Click(object sender, EventArgs e)
