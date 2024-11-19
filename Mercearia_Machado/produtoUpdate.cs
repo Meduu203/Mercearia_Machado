@@ -23,7 +23,7 @@ public class ProdutoUpdate
 
                 string query = @"UPDATE Produto
                 SET
-                Nome=@Nome, Setor=@Setor, Descricao=@Descricao, Valor=@Valor
+                Nome=@Nome, Setor=@Setor, Descricao=@Descricao, Valor=@Valor, Imagem=@Imagem
                 WHERE Cod=@Cod";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
@@ -32,6 +32,8 @@ public class ProdutoUpdate
                     command.Parameters.AddWithValue("@Setor", produto.Setor);
                     command.Parameters.AddWithValue("@Descricao", produto.Descricao);
                     command.Parameters.AddWithValue("@Valor", produto.Valor);
+                    command.Parameters.AddWithValue("@Imagem", produto.Imagem);
+
 
 
 

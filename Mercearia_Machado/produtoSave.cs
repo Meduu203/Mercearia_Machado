@@ -21,15 +21,16 @@ public class ProdutoSave
             return false;
         }
         //string de inserção no sql
-        string query = @"INSERT INTO produto (Nome,Setor,Descricao,Valor)
+        string query = @"INSERT INTO produto (Nome,Setor,Descricao,Valor,Imagem)
                         VALUES
-                        (@Nome,@Setor,@Descricao,@Valor)";
+                        (@Nome,@Setor,@Descricao,@Valor, @Imagem)";
         using (MySqlCommand cmd = new MySqlCommand(query, connection))
         {
             cmd.Parameters.AddWithValue("@Nome", produto.Nome);
             cmd.Parameters.AddWithValue("@Setor", produto.Setor);
             cmd.Parameters.AddWithValue("@Descricao", produto.Descricao);
             cmd.Parameters.AddWithValue("@Valor", produto.Valor);
+            cmd.Parameters.AddWithValue("@Imagem", produto.Imagem);
 
 
             //tratamento de erro, se tentar salvar, salva certinho, se der algum erro, retorna qual é o erro pro usuario, facilitando pra quem for resolver

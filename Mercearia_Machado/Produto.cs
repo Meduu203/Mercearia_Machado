@@ -7,5 +7,6 @@ public class Produto
     public string Setor { get; set; }
     public string Descricao { get; set; }
     public string Valor { get; set; }
+    public byte[] Imagem { get; set; }
 }
 

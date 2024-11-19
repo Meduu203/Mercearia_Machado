@@ -44,7 +44,7 @@
             this.relatorioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxImagem = new System.Windows.Forms.PictureBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -52,12 +52,16 @@
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.cbbSetorprod = new System.Windows.Forms.ComboBox();
             this.btnNovo = new System.Windows.Forms.Button();
+            this.btnCarregarImagem = new System.Windows.Forms.Button();
+            this.btnPesquisaCod = new System.Windows.Forms.Button();
+            this.btnAtualizarProd = new System.Windows.Forms.Button();
+            this.btnEditarProd = new System.Windows.Forms.Button();
+            this.lblValor = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagem)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -158,20 +162,20 @@
             // todosProdutosToolStripMenuItem
             // 
             this.todosProdutosToolStripMenuItem.Name = "todosProdutosToolStripMenuItem";
-            this.todosProdutosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.todosProdutosToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.todosProdutosToolStripMenuItem.Text = "Todos Produtos";
             // 
             // adicionarProdutoToolStripMenuItem
             // 
             this.adicionarProdutoToolStripMenuItem.Name = "adicionarProdutoToolStripMenuItem";
-            this.adicionarProdutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adicionarProdutoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.adicionarProdutoToolStripMenuItem.Text = "Adicionar Produto";
             this.adicionarProdutoToolStripMenuItem.Click += new System.EventHandler(this.adicionarProdutoToolStripMenuItem_Click);
             // 
             // editarProdutoToolStripMenuItem
             // 
             this.editarProdutoToolStripMenuItem.Name = "editarProdutoToolStripMenuItem";
-            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editarProdutoToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.editarProdutoToolStripMenuItem.Text = "Editar Produto";
             // 
             // relatorioToolStripMenuItem
@@ -192,18 +196,18 @@
             this.sairToolStripMenuItem1.Size = new System.Drawing.Size(38, 20);
             this.sairToolStripMenuItem1.Text = "Sair";
             // 
-            // pictureBox1
+            // pictureBoxImagem
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(36, 157);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(142, 169);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxImagem.Location = new System.Drawing.Point(36, 157);
+            this.pictureBoxImagem.Name = "pictureBoxImagem";
+            this.pictureBoxImagem.Size = new System.Drawing.Size(142, 160);
+            this.pictureBoxImagem.TabIndex = 9;
+            this.pictureBoxImagem.TabStop = false;
             // 
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(202, 366);
+            this.btnSalvar.Location = new System.Drawing.Point(236, 370);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 11;
@@ -214,18 +218,18 @@
             // btnEditar
             // 
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.Location = new System.Drawing.Point(378, 366);
+            this.btnEditar.Location = new System.Drawing.Point(317, 370);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.Size = new System.Drawing.Size(89, 23);
             this.btnEditar.TabIndex = 12;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "PESQUISAR";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnCancelar
             // 
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(540, 366);
+            this.btnCancelar.Location = new System.Drawing.Point(493, 370);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(84, 23);
             this.btnCancelar.TabIndex = 13;
@@ -268,16 +272,6 @@
             this.label7.TabIndex = 19;
             this.label7.Text = "Imagem do produto";
             // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAtualizar.Location = new System.Drawing.Point(283, 366);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(90, 23);
-            this.btnAtualizar.TabIndex = 20;
-            this.btnAtualizar.Text = "ATUALIZAR";
-            this.btnAtualizar.UseVisualStyleBackColor = true;
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -290,6 +284,7 @@
             // 
             // cbbSetorprod
             // 
+            this.cbbSetorprod.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbbSetorprod.FormattingEnabled = true;
             this.cbbSetorprod.Items.AddRange(new object[] {
             "Porções",
@@ -302,7 +297,7 @@
             // btnNovo
             // 
             this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNovo.Location = new System.Drawing.Point(459, 366);
+            this.btnNovo.Location = new System.Drawing.Point(412, 370);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(75, 23);
             this.btnNovo.TabIndex = 23;
@@ -310,15 +305,77 @@
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
+            // btnCarregarImagem
+            // 
+            this.btnCarregarImagem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCarregarImagem.Location = new System.Drawing.Point(36, 317);
+            this.btnCarregarImagem.Name = "btnCarregarImagem";
+            this.btnCarregarImagem.Size = new System.Drawing.Size(142, 23);
+            this.btnCarregarImagem.TabIndex = 24;
+            this.btnCarregarImagem.Text = "Adicionar Imagem";
+            this.btnCarregarImagem.UseVisualStyleBackColor = true;
+            this.btnCarregarImagem.Click += new System.EventHandler(this.btnCarregarImagem_Click);
+            // 
+            // btnPesquisaCod
+            // 
+            this.btnPesquisaCod.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPesquisaCod.Location = new System.Drawing.Point(66, 112);
+            this.btnPesquisaCod.Name = "btnPesquisaCod";
+            this.btnPesquisaCod.Size = new System.Drawing.Size(79, 23);
+            this.btnPesquisaCod.TabIndex = 25;
+            this.btnPesquisaCod.Text = "Procurar";
+            this.btnPesquisaCod.UseVisualStyleBackColor = true;
+            this.btnPesquisaCod.Visible = false;
+            this.btnPesquisaCod.Click += new System.EventHandler(this.btnPesquisaCod_Click);
+            // 
+            // btnAtualizarProd
+            // 
+            this.btnAtualizarProd.Enabled = false;
+            this.btnAtualizarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizarProd.Location = new System.Drawing.Point(147, 370);
+            this.btnAtualizarProd.Name = "btnAtualizarProd";
+            this.btnAtualizarProd.Size = new System.Drawing.Size(164, 23);
+            this.btnAtualizarProd.TabIndex = 26;
+            this.btnAtualizarProd.Text = "SALVAR ALTERAÇÕES";
+            this.btnAtualizarProd.UseVisualStyleBackColor = true;
+            this.btnAtualizarProd.Visible = false;
+            this.btnAtualizarProd.Click += new System.EventHandler(this.btnAtualizarProd_Click);
+            // 
+            // btnEditarProd
+            // 
+            this.btnEditarProd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditarProd.Location = new System.Drawing.Point(221, 370);
+            this.btnEditarProd.Name = "btnEditarProd";
+            this.btnEditarProd.Size = new System.Drawing.Size(89, 23);
+            this.btnEditarProd.TabIndex = 27;
+            this.btnEditarProd.Text = "EDITAR";
+            this.btnEditarProd.UseVisualStyleBackColor = true;
+            this.btnEditarProd.Visible = false;
+            this.btnEditarProd.Click += new System.EventHandler(this.btnEditarProd_Click);
+            // 
+            // lblValor
+            // 
+            this.lblValor.AutoSize = true;
+            this.lblValor.Location = new System.Drawing.Point(215, 327);
+            this.lblValor.Name = "lblValor";
+            this.lblValor.Size = new System.Drawing.Size(45, 13);
+            this.lblValor.TabIndex = 28;
+            this.lblValor.Text = "ex: 5.50";
+            this.lblValor.Visible = false;
+            // 
             // adicionarProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblValor);
+            this.Controls.Add(this.btnEditarProd);
+            this.Controls.Add(this.btnAtualizarProd);
+            this.Controls.Add(this.btnPesquisaCod);
+            this.Controls.Add(this.btnCarregarImagem);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.cbbSetorprod);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtDescricao);
@@ -326,7 +383,7 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pictureBoxImagem);
             this.Controls.Add(this.txtNomeproduto);
             this.Controls.Add(this.txtCodprod);
             this.Controls.Add(this.label5);
@@ -337,9 +394,10 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "adicionarProduto";
             this.Text = "adicionarProduto";
+            this.Load += new System.EventHandler(this.adicionarProduto_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxImagem)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -360,7 +418,7 @@
         private System.Windows.Forms.ToolStripMenuItem editarProdutoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem relatorioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBoxImagem;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnCancelar;
@@ -371,9 +429,13 @@
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem pedidosDoDiaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem todosProdutosToolStripMenuItem;
-        private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cbbSetorprod;
         private System.Windows.Forms.Button btnNovo;
+        private System.Windows.Forms.Button btnCarregarImagem;
+        private System.Windows.Forms.Button btnPesquisaCod;
+        private System.Windows.Forms.Button btnAtualizarProd;
+        private System.Windows.Forms.Button btnEditarProd;
+        private System.Windows.Forms.Label lblValor;
     }
 }
