@@ -16,7 +16,7 @@ namespace Mercearia_Machado
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new adicionarProduto());
+            Application.Run(new frmMenu());
         }
     }
 }
